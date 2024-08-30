@@ -8,7 +8,8 @@
         "project": "DesafioPicPay.Api.csproj",
         "mutation-level": "Complete",
         "ignore-methods": [
-            "*Log*"
+            "*Log*",
+            "LoggerMessage.Define"
         ]
     }
 }
