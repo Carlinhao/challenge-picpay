@@ -1,6 +1,6 @@
 ﻿using DesafioPicPay.Api.Controllers;
 using DesafioPicPay.Core.Dtos;
-using DesafioPicPay.Core.Interfaces;
+using DesafioPicPay.Core.Interfaces.Repositories;
 using DesafioPicPay.Core.Mappers;
 using Microsoft.AspNetCore.Mvc;
 using Moq;

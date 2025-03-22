@@ -1,16 +1,20 @@
-var builder = WebApplication.CreateBuilder(args);
+using DesafioPicPay.Api.Extensions;
+using DesafioPicPay.Api.Middlewares;
+using DesafioPicPay.Infrastructure.IoC;
+
+WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddControllers();
 
-var app = builder.Build();
+builder.Services.GetService();
+builder.Services.SwaggerServices();
 
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+WebApplication app = builder.Build();
 
+app.UseMiddleware<GlobalErrorHandler>();
 app.UseHttpsRedirection();
+app.MapControllers();
+app.SwaggerConfigure();
 
-app.Run();
+await app.RunAsync().ConfigureAwait(false);

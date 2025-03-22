@@ -4,7 +4,7 @@ namespace DesafioPicPay.Core.Dtos
 {
     public class TransferDto
     {
-        [JsonPropertyName("payer")]
+        [JsonPropertyName("payeer")]
         public Payeer Payeer { get; set; }
 
         [JsonPropertyName("payee")]

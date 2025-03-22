@@ -38,7 +38,7 @@ public class AssertionConcern
         }
     }
 
-    public static void ValidateIfTypeYser(char value, string message)
+    public static void ValidateTypeCostumer(char value, string message)
     {
         if (!value.Equals('F') || !value.Equals('f') || !value.Equals('J') || !value.Equals('j'))
         {

@@ -22,33 +22,6 @@ namespace DesafioPicPay.Api.Extensions
                             Url = new Uri("https://github.com/Carlinhao")
                         }
                     });
-
-                //c.AddSecurityDefinition(
-                //    "Bearer",
-                //    new OpenApiSecurityScheme
-                //    {
-                //        Name = "Authorization",
-                //        BearerFormat = "JWT",
-                //        Description = "Copy 'Bearer ' + token'",
-                //        Scheme = "Authorization",
-                //        In = ParameterLocation.Header,
-                //        Type = SecuritySchemeType.ApiKey
-                //    });
-
-                //c.AddSecurityRequirement(new OpenApiSecurityRequirement
-                //{
-                //    {
-                //          new OpenApiSecurityScheme
-                //          {
-                //              Reference = new OpenApiReference
-                //              {
-                //                  Type = ReferenceType.SecurityScheme,
-                //                  Id = "Bearer"
-                //              }
-                //          },
-                //         Array.Empty<string>()
-                //    }
-                //});
             });
         }
 

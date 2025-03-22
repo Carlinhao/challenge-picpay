@@ -1,19 +1,28 @@
 ﻿using DesafioPicPay.Core.Dtos;
+using DesafioPicPay.Core.Dtos.Request;
+using DesafioPicPay.Core.Dtos.Responses;
 using DesafioPicPay.Core.Models;
 
 namespace DesafioPicPay.Core.Mappers
 {
     public  static class MapperDtoModel
     {
-        public static User MapUserDtoToModel(this UserDto userDto)
+        public static User MapUserDtoToModel(this UserRequest userRequest)
         {
-            if (userDto is null)
+            if (userRequest is null)
                 return null;
 
-            return new(Guid.NewGuid().ToString(), userDto.FullName, userDto.CpfCnpj, userDto.Email, userDto.Password, userDto.Active, userDto.BirthDate, userDto.TypeUser);
+            return new(Guid.NewGuid().ToString(), userRequest.FullName, userRequest.CpfCnpj, userRequest.Email, userRequest.Password, userRequest.Active, userRequest.BirthDate, userRequest.TypeUser);
         }
 
 
+        public static UserResponse MapUserModelToDto(this User user)
+        {
+            if (user is null)
+                return null;
+
+            return new (user.UserId, user.FullName, user.CpfCnpj, user.Email, user.Active, user.BirthDate, user.TypeUser);
+        }
         public static Account MapAccountDtoToModel(this AccountDto accountDto)
         {
             if (accountDto == null)
@@ -27,7 +36,7 @@ namespace DesafioPicPay.Core.Mappers
             if (transferDto is null)
                 return null;
 
-            return new(transferDto.TransferValue, transferDto.Payeer.UserId, transferDto.Payee.UserId, DateTime.Now);
+            return new (transferDto.Payeer, transferDto.Payee, transferDto.TransferValue);
         }
     }
 }

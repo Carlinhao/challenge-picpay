@@ -1,15 +1,22 @@
-﻿namespace DesafioPicPay.Core.Models;
+﻿using DesafioPicPay.Core.Dtos;
+using DesafioPicPay.Core.Interfaces;
 
-public class Transfer
+namespace DesafioPicPay.Core.Models;
+
+public class Transfer : ITransfer
 {
-    public decimal ValueTransfer { get; private set; }
-    public string Payeer { get; private set; }
-    public string Payee { get; private set; }
-    
-    public Transfer(decimal valueTransfer, string payeer, string payee)
+    public Payeer Payeer { get; }
+    public Payee Payee { get; }
+    public decimal ValueTransfer { get; }
+    public DateTime DateTransfer { get; }
+
+    public Transfer(Payeer payeer, Payee payee, decimal valueTransfer)
     {
-        ValueTransfer = valueTransfer;
         Payeer = payeer;
         Payee = payee;
+        ValueTransfer = valueTransfer;
+        DateTransfer = DateTime.Now;
     }
+    
+    protected Transfer() { }
 }
