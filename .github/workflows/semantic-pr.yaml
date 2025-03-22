@@ -8,14 +8,34 @@ on:
       - synchronize
       - reopened
 
-permissions:
-  pull-requests: read
-
 jobs:
-  main:
-    name: Validate PR title
+  build:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: amannn/action-semantic-pull-request@v5
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: 9.0.x
+
+      - name: Restore dependencies
+        run: dotnet restore employer.solution.sln
+
+      - name: Build
+        run: dotnet build challenge-picpay.sln -c Release --no-restore
+
+  tests:
+    name: Run unit tests
+    runs-on: ubuntu-latest
+
+    needs: build
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-dotnet@v3
+
+      - name: Unit Tests
+        run: dotnet test challenge-picpay/DesafioPicPay.Tests -c Release --no-build --verbosity normal --filter "Category!=LongRunning"
