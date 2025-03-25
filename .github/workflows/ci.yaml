@@ -28,10 +28,10 @@ jobs:
           dotnet-version: 9.0.x
 
       - name: Restore Dependencies
-        run: dotnet restore ./challenge-picpay.sln
+        run: dotnet restore DesafioPicPay.sln
 
       - name: Build Solution
-        run: dotnet build ./challenge-picpay.sln -c Release --no-restore
+        run: dotnet build DesafioPicPay.sln -c Release --no-restore
 
   tests:
     name: Run Unit Tests
