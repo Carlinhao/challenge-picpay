@@ -48,4 +48,4 @@ jobs:
           dotnet-version: 9.0.x
 
       - name: Run Unit Tests
-        run: dotnet test challenge-picpay/DesafioPicPay.Tests -c Release --no-build --verbosity normal --filter "Category!=LongRunning"
+        run: dotnet test DesafioPicPay.Tests -c Release --no-build --verbosity normal --filter "Category!=LongRunning"
