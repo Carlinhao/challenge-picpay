@@ -2,7 +2,7 @@
 
 on:
   workflow_run:
-    workflows: ["Semantic Pull Request"]
+    workflows: ["Workflow 1"]
     types:
       - completed
 
@@ -15,7 +15,7 @@ jobs:
     name: Run Mutation Tests
     runs-on: ubuntu-latest
     needs: build
-
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     steps:
       - name: Checkout Code
         uses: actions/checkout@v3
