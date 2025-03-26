@@ -46,6 +46,9 @@ jobs:
         uses: actions/setup-dotnet@v3
         with:
           dotnet-version: 8.0.x
+      
+      - name: Restore Dependencies
+        run: dotnet restore DesafioPicPay.sln
 
       - name: Run Unit Tests
         run: dotnet test DesafioPicPay.Tests -c Release --no-build --verbosity normal --filter "Category!=LongRunning"
