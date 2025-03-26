@@ -1,0 +1,32 @@
+﻿name: Execute Mutation Tests
+
+on:
+  workflow_run:
+    workflows: ["Semantic Pull Request"]
+    types:
+      - completed
+
+jobs:
+  build:
+    name: Build Project
+    runs-on: ubuntu-latest
+    
+  mutation-testing:
+    name: Run Mutation Tests
+    runs-on: ubuntu-latest
+    needs: build
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: 8.0.x
+
+      - name: Install Stryker
+        run: dotnet tool install -g dotnet-stryker
+
+      - name: Run Stryker Mutator
+        run: dotnet stryker
