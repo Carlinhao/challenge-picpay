@@ -1,0 +1,17 @@
+@hostname=localhost
+@port=7040
+
+POST https://{{hostname}}:{{port}}/api/v1/users/
+Content-Type: application/json
+
+{
+  "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+  "fullName": "Paul Stone",
+  "cpfCnpj": "15328726073",
+  "email": "paul.stone@gmail.com",
+  "password": "321ca",
+  "isActive": true,
+  "birthDate": "1984-03-22T21:32:35.752Z",
+  "typeUser": "f"
+}
+###

@@ -1,0 +1,60 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35111.106
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesafioPicPay.Api", "DesafioPicPay.Api\DesafioPicPay.Api.csproj", "{03C8ADF9-A54D-4C84-9EF4-B69E13BAD119}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesafioPicPay.Core", "DesafioPicPay.Core\DesafioPicPay.Core.csproj", "{79BACCE2-207E-4264-9797-6EED5C27E9CB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesafioPicPay.Infrastructure", "DesafioPicPay.Infrastructure\DesafioPicPay.Infrastructure.csproj", "{C5F67A05-249E-4B7D-8048-C4C27017125F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{C14ADB26-2344-4FDE-8045-E2BB8E7E85F4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{5DDDF9E0-43CA-4E24-8794-A73A3E1D080C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesafioPicPay.Tests", "DesafioPicPay.Tests\DesafioPicPay.Tests.csproj", "{038920C6-2649-4202-AC97-5B2DD01F7CDA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesafioPicPay.Service", "DesafioPicPay.Service\DesafioPicPay.Service.csproj", "{E7C95431-D037-4C17-A809-EB10CC4A009B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{03C8ADF9-A54D-4C84-9EF4-B69E13BAD119}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03C8ADF9-A54D-4C84-9EF4-B69E13BAD119}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03C8ADF9-A54D-4C84-9EF4-B69E13BAD119}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03C8ADF9-A54D-4C84-9EF4-B69E13BAD119}.Release|Any CPU.Build.0 = Release|Any CPU
+		{79BACCE2-207E-4264-9797-6EED5C27E9CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79BACCE2-207E-4264-9797-6EED5C27E9CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79BACCE2-207E-4264-9797-6EED5C27E9CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79BACCE2-207E-4264-9797-6EED5C27E9CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5F67A05-249E-4B7D-8048-C4C27017125F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5F67A05-249E-4B7D-8048-C4C27017125F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5F67A05-249E-4B7D-8048-C4C27017125F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5F67A05-249E-4B7D-8048-C4C27017125F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{038920C6-2649-4202-AC97-5B2DD01F7CDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{038920C6-2649-4202-AC97-5B2DD01F7CDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{038920C6-2649-4202-AC97-5B2DD01F7CDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{038920C6-2649-4202-AC97-5B2DD01F7CDA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E7C95431-D037-4C17-A809-EB10CC4A009B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7C95431-D037-4C17-A809-EB10CC4A009B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7C95431-D037-4C17-A809-EB10CC4A009B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7C95431-D037-4C17-A809-EB10CC4A009B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{03C8ADF9-A54D-4C84-9EF4-B69E13BAD119} = {C14ADB26-2344-4FDE-8045-E2BB8E7E85F4}
+		{79BACCE2-207E-4264-9797-6EED5C27E9CB} = {C14ADB26-2344-4FDE-8045-E2BB8E7E85F4}
+		{C5F67A05-249E-4B7D-8048-C4C27017125F} = {C14ADB26-2344-4FDE-8045-E2BB8E7E85F4}
+		{038920C6-2649-4202-AC97-5B2DD01F7CDA} = {5DDDF9E0-43CA-4E24-8794-A73A3E1D080C}
+		{E7C95431-D037-4C17-A809-EB10CC4A009B} = {C14ADB26-2344-4FDE-8045-E2BB8E7E85F4}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0D0F55B4-370E-4A92-B438-EFE80DC840FC}
+	EndGlobalSection
+EndGlobal
