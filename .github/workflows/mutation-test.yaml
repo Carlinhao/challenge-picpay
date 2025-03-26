@@ -10,7 +10,22 @@ jobs:
   build:
     name: Build Project
     runs-on: ubuntu-latest
-    
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: 8.0.x
+
+      - name: Restore Dependencies
+        run: dotnet restore DesafioPicPay.sln
+
+      - name: Build Solution
+        run: dotnet build DesafioPicPay.sln -c Release --no-restore
+
   mutation-testing:
     name: Run Mutation Tests
     runs-on: ubuntu-latest
@@ -24,7 +39,7 @@ jobs:
         uses: actions/setup-dotnet@v3
         with:
           dotnet-version: 8.0.x
-        
+
       - name: Install Stryker
         run: dotnet tool install -g dotnet-stryker
 
