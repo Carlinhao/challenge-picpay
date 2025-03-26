@@ -51,4 +51,4 @@ jobs:
         run: dotnet restore DesafioPicPay.sln
 
       - name: Run Unit Tests
-        run: dotnet test challenge-pipcay/DesafioPicPay.Tests -c Release --no-build --verbosity normal --filter "Category!=LongRunning"
+        run: dotnet test ./DesafioPicPay.Tests -c Release --no-build --verbosity normal --filter "Category!=LongRunning"
